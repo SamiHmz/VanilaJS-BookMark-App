@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+html {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background-color: #dfdbe5;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 40px;
+}
+a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+.btn {
+  width: 200px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  align-self: center;
+  background-color: #f1404b;
+  color: #fff;
+  margin-top: 50px;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  font-size: 1.2rem;
+  justify-content: space-evenly;
+}
+.btn--dark {
+  background-color: #252c41;
+  margin: 0;
+}
+.btn--dark:hover {
+  filter: brightness(110%);
+}
+
+#add:hover {
+  filter: brightness(150%);
+}
+/* bookmarks */
+
+.bookmarks {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.bookmarks__element {
+  color: #ffff;
+  padding: 10px 20px;
+  background-color: #252c41;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.bookmarks__element:hover {
+  filter: brightness(120%);
+}
+.bookmarks__element i {
+  margin-left: 10px;
+}
+
+.modal__background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__form {
+  width: 300px;
+  height: 250px;
+  padding: 10px 20px;
+  background-color: #f1404b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  border-radius: 5px;
+  animation: modalopen 1.5s;
+}
+.modal__form__element {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__form__element input {
+  background-color: #f4f5f9;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+}
+.modal__form__element input:focus {
+  outline: none;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
